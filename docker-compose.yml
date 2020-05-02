@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    build: "./web"
+    volumes:
+      - ./web:/home/node/app
+    ports:
+      - "8000:80"
+    depends_on:
+      - mailer
+  mailer:
+    build: "./mailer"
+    volumes:
+      - ./mailer:/home/node/app
+    ports:
+      - "8001:80"

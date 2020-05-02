@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Microservices
+    body
+        form(action="/newsletter" method="POST")
+            label(for="email") Email
+            input(type="text" name="email")
+            button(type="submit") Submit
+        br
+        h1 Email list
+        ul
+            each email, i in emails
+                li= email
